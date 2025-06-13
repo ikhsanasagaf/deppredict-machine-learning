@@ -13,7 +13,7 @@ try:
     # Menggunakan path relatif agar bekerja di lingkungan deployment
     script_dir = os.path.dirname(__file__)
     scaler_path = os.path.join(script_dir, 'scaler.pkl')
-    model_path = os.path.join(script_dir, 'model.keras')
+    model_path = os.path.join(script_dir, 'best_model.keras')
     
     scaler = pickle.load(open(scaler_path, 'rb'))
     model = tf.keras.models.load_model(model_path)
